@@ -1,4 +1,4 @@
-import 'package:asuka/asuka.dart' as asuka;
+import 'package:asuka/asuka.dart';
 import 'package:asuka_teste/presentation/homecontroller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -15,13 +15,13 @@ void main() {
       const String content = 'test';
       await tester.pumpWidget(
         MaterialApp(
-          builder: asuka.builder,
+          builder: Asuka.builder,
           home: Scaffold(
             body: Builder(
               builder: (context) {
                 return ElevatedButton(
                   onPressed: () {
-                    asuka.AsukaSnackbar.warning('test').show();
+                    AsukaSnackbar.warning('test').show();
                   },
                   child: const Text('Warning'),
                 );
@@ -45,13 +45,13 @@ void main() {
       const String content = 'test';
       await tester.pumpWidget(
         MaterialApp(
-          builder: asuka.builder,
+          builder: Asuka.builder,
           home: Scaffold(
             body: Builder(
               builder: (context) {
                 return ElevatedButton(
                   onPressed: () {
-                    asuka.AsukaSnackbar.success('test').show();
+                    AsukaSnackbar.success('test').show();
                   },
                   child: const Text('Success'),
                 );
@@ -75,13 +75,13 @@ void main() {
       const String content = 'test';
       await tester.pumpWidget(
         MaterialApp(
-          builder: asuka.builder,
+          builder: Asuka.builder,
           home: Scaffold(
             body: Builder(
               builder: (context) {
                 return ElevatedButton(
                   onPressed: () {
-                    asuka.AsukaSnackbar.success('test').show();
+                    AsukaSnackbar.success('test').show();
                   },
                   child: const Text('Alert'),
                 );
@@ -105,13 +105,13 @@ void main() {
       const String content = 'test';
       await tester.pumpWidget(
         MaterialApp(
-          builder: asuka.builder,
+          builder: Asuka.builder,
           home: Scaffold(
             body: Builder(
               builder: (context) {
                 return ElevatedButton(
                   onPressed: () {
-                    asuka.AsukaSnackbar.info('test').show();
+                    AsukaSnackbar.info('test').show();
                   },
                   child: const Text('Info'),
                 );
@@ -135,13 +135,13 @@ void main() {
       const String content = 'test';
       await tester.pumpWidget(
         MaterialApp(
-          builder: asuka.builder,
+          builder: Asuka.builder,
           home: Scaffold(
             body: Builder(
               builder: (context) {
                 return ElevatedButton(
                   onPressed: () {
-                    asuka.AsukaSnackbar.message('test').show();
+                    AsukaSnackbar.message('test').show();
                   },
                   child: const Text('Message'),
                 );
@@ -166,14 +166,14 @@ void main() {
       const String content = 'New Snackbar';
       await tester.pumpWidget(
         MaterialApp(
-          builder: asuka.builder,
+          builder: Asuka.builder,
           home: Scaffold(
             body: Builder(
               builder: (context) {
                 return ElevatedButton(
                   onPressed: () {
                     controller.onClickSnackbar;
-                    asuka.showSnackBar(
+                    Asuka.showSnackBar(
                       const SnackBar(
                         content: Text('New Snackbar'),
                       ),
@@ -202,14 +202,14 @@ void main() {
       const String content = 'Dialog';
       await tester.pumpWidget(
         MaterialApp(
-          builder: asuka.builder,
+          builder: Asuka.builder,
           home: Scaffold(
             body: Builder(
               builder: (context) {
                 return ElevatedButton(
                   onPressed: () {
                     controller.onClickDialog;
-                    asuka.showDialog(
+                    Asuka.showDialog(
                       builder: (context) => AlertDialog(
                         title: const Text('Dialog'),
                         content: const Text('This is a custom Dialog '),
@@ -247,14 +247,14 @@ void main() {
       const String content = 'Cancel';
       await tester.pumpWidget(
         MaterialApp(
-          builder: asuka.builder,
+          builder: Asuka.builder,
           home: Scaffold(
             body: Builder(
               builder: (context) {
                 return ElevatedButton(
                   onPressed: () {
                     controller.onClickBottomSheet;
-                    asuka.showBottomSheet(
+                    Asuka.showBottomSheet(
                       (context) {
                         return Material(
                           elevation: 7,
@@ -305,14 +305,14 @@ void main() {
       const String content = 'Cancel';
       await tester.pumpWidget(
         MaterialApp(
-          builder: asuka.builder,
+          builder: Asuka.builder,
           home: Scaffold(
             body: Builder(
               builder: (context) {
                 return ElevatedButton(
                   onPressed: () {
                     controller.onClickModalBottomSheet;
-                    asuka.showModalBottomSheet(
+                    Asuka.showModalBottomSheet(
                       builder: (context) => Material(
                         borderRadius: const BorderRadius.only(
                           topLeft: Radius.circular(16),
